@@ -1,0 +1,45 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Protocol",
+    "@id": "b2ai_dsm5_schema",
+    "prefLabel": "b2ai_dsm5",
+    "description": "DSM-5 and voice task for b2ai",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "landingPage": [
+        {
+            "@id": "README.md",
+            "inLanguage": "en"
+        }
+    ],
+    "messages": [
+        {
+            "message": "Test message: Triggered when item1 value is greater than 0",
+            "jsExpression": "item1 > 0"
+        }
+    ],
+    "ui": {
+        "addProperties": [
+            {
+                "isAbout": "../activities/selectActivity/selectActivity_schema",
+                "variableName": "selectActivity_schema",
+                "prefLabel": {
+                    "en": "Select Response"
+                }
+            },
+            {
+                "isAbout": "../activities/Activity1/Activity1_schema",
+                "variableName": "Activity1_schema",
+                "prefLabel": "Screening"
+            }
+        ],
+        "order": [
+            "../activities/selectActivity/selectActivity_schema",
+            "../activities/Activity1/Activity1_schema"
+        ],
+        "shuffle": false,
+        "allow": [
+            "reproschema:AllowExport"
+        ]
+    }
+}
